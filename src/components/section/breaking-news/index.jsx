@@ -1,8 +1,7 @@
 import React from 'react';
 import data from '../../../data/config.json';
 import { useGuestName } from '../../../hooks/useGuestName';
-
-const cdn = (path) => `${data.cdn_base_url}${path}`;
+import { cdn } from '../../../utils/cdn';
 
 export default function BreakingNews() {
   const guestName = useGuestName();

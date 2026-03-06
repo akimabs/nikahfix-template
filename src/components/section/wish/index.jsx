@@ -3,8 +3,7 @@ import supabase from '../../../lib/supabaseClient';
 import badwords from 'indonesian-badwords';
 import { useGuestName } from '../../../hooks/useGuestName';
 import config from '../../../data/config.json';
-
-const cdn = (path) => `${config.cdn_base_url}${path}`;
+import { cdn } from '../../../utils/cdn';
 // Dynamic import for confetti to reduce initial bundle size
 
 const WishItem = forwardRef(({ name, message, color, attendance }, ref) => (

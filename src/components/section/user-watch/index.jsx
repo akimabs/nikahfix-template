@@ -1,8 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useGuestName } from "../../../hooks/useGuestName";
 import data from "../../../data/config.json";
-
-const cdn = (path) => `${data.cdn_base_url}${path}`;
+import { cdn } from '../../../utils/cdn';
 
 export default function UserWatch({ onClick }) {
   const guestName = useGuestName();

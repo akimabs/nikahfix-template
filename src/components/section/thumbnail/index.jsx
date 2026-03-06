@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import DetailInfo from '../detail-info';
 import data from '../../../data/config.json';
-
-const cdn = (path) => `${data.cdn_base_url}${path}`;
+import { cdn } from '../../../utils/cdn';
 
 const TagItem = ({ title }) => {
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 import data from '../../../data/config.json';
-
-const cdn = (path) => `${data.cdn_base_url}${path}`;
+import { cdn } from '../../../utils/cdn';
 
 const LoveItem = ({ imageUrl, title, duration, description }) => {
   return (

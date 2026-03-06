@@ -1,7 +1,6 @@
 import { useState } from "react";
 import data from "../../../data/config.json";
-
-const cdn = (path) => `${data.cdn_base_url}${path}`;
+import { cdn } from '../../../utils/cdn';
 
 export default function Gift() {
   const [copied, setCopied] = useState(false);

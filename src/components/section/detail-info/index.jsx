@@ -4,14 +4,13 @@ import BreakingNews from '../breaking-news';
 import Bridegroom from '../bride-groom';
 import Gift from '../gift';
 import data from '../../../data/config.json';
+import { cdn } from '../../../utils/cdn';
 
 // Lazy load heavy components
 const LoveStory = lazy(() => import('../love-story'));
 const WishSection = lazy(() => import('../wish'));
 const Footer = lazy(() => import('../footer'));
 const SongButton = lazy(() => import('../../ui/song-button'));
-
-const cdn = (path) => `${data.cdn_base_url}${path}`;
 
 export default function DetailInfo() {
   const [imageLoaded, setImageLoaded] = useState(false);
