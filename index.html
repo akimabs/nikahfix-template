@@ -54,7 +54,7 @@
 
 <body style="background-color: black">
   <div id="root"></div>
-  <script type="module" src="./src/main.jsx"></script>
+  <script type="module" src="/src/main.jsx"></script>
 
   <!-- 
       Umami Analytics (optional)
@@ -62,56 +62,6 @@
       Hapus script ini jika tidak menggunakan Umami.
     -->
   <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_UMAMI_WEBSITE_ID"></script> -->
-
-  <script type="module">
-    // Load config to populate meta tags dynamically
-    // We use fetch instead of import assert for better browser compatibility
-    const initMeta = async () => {
-      try {
-        // Use a relative path so it works with the base URL
-        const response = await fetch('./src/data/config.json');
-        const config = await response.json();
-
-        const cdnBase = config.cdn_base_url;
-        const meta = config.meta;
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const kepada = urlParams.get('kepada');
-
-        const title = kepada
-          ? `${meta.site_name} - Undangan kepada ${kepada}`
-          : meta.title;
-
-        // Page title
-        document.title = title;
-
-        // OG tags
-        document.getElementById('og-title').setAttribute('content', title);
-        document.getElementById('og-description').setAttribute('content', meta.description);
-
-        // Handle OG image path (could be CDN or local)
-        const ogImagePath = meta.og_image_path.startsWith('http')
-          ? meta.og_image_path
-          : (cdnBase.startsWith('http') ? `${cdnBase}${meta.og_image_path}` : `./images${meta.og_image_path}`);
-
-        document.getElementById('og-image').setAttribute('content', ogImagePath);
-        document.getElementById('og-url').setAttribute('content', meta.og_url);
-
-        // Twitter tags
-        document.getElementById('twitter-title').setAttribute('content', title);
-        document.getElementById('twitter-description').setAttribute('content', meta.description);
-        document.getElementById('twitter-image').setAttribute('content', ogImagePath);
-
-        // Standard tags
-        document.getElementById('meta-description').setAttribute('content', meta.description);
-        document.getElementById('meta-keywords').setAttribute('content', meta.keywords);
-      } catch (e) {
-        console.error('Failed to load config for meta tags:', e);
-      }
-    };
-
-    initMeta();
-  </script>
 </body>
 
 </html>

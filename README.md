@@ -14,7 +14,7 @@
 
 ```bash
 git clone https://github.com/akimabs/nikahfix-template.git
-cd nikahfix
+cd nikahfix-template
 npm install
 ```
 
