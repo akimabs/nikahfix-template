@@ -1,0 +1,101 @@
+{
+  "cdn_base_url": "/images",
+  "meta": {
+    "site_name": "Wedding Invitation",
+    "title": "Wedding Invitation - Groom & Bride",
+    "description": "Groom & Bride: Before the Big Day - Wedding Invitation",
+    "og_image_path": "/sample_cover.png",
+    "og_url": "https://yourusername.github.io/nikahfix",
+    "keywords": "wedding invitation, digital invitation, wedding"
+  },
+  "images": {
+    "logo": "/NIKAHFIX.webp",
+    "guest_icon": "/guest-icon.webp",
+    "cover": "/sample_cover.png",
+    "letter": "/sample_story.png",
+    "face": "/face.webp",
+    "icon_4k": "/4k-icon.webp",
+    "icon_hd": "/hd-icon.webp",
+    "thumbnail": "/sample_cover.png",
+    "card_backgrounds": [
+      "/sample_story.png",
+      "/sample_story.png",
+      "/sample_story.png",
+      "/sample_story.png",
+      "/sample_cover.png"
+    ]
+  },
+  "pegantin": {
+    "pria": {
+      "foto": "/sample_portraits.png",
+      "panggilan": "Groom",
+      "nama": "Full Name Groom",
+      "anak_ke": "pertama",
+      "bapak": "Father's Name",
+      "ibu": "Mother's Name"
+    },
+    "wanita": {
+      "foto": "/sample_portraits.png",
+      "panggilan": "Bride",
+      "nama": "Full Name Bride",
+      "anak_ke": "kedua",
+      "bapak": "Father's Name",
+      "ibu": "Mother's Name"
+    }
+  },
+  "audio_url": "/sound/fadein_backsound.mp3",
+  "song_info": {
+    "title": "Song Title",
+    "artist": "Artist Name"
+  },
+  "tanggal_pernikahan": "01 January 2026",
+  "intro": "Setelah Hakim dan Wahyu dipertemukan dalam situasi yang tepat, di mana keduanya telah siap untuk memulai hubungan bersama, tibalah mereka di awal perjalanan baru menuju pernikahan.",
+  "ayat": "\"Segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah)\" (Q.S Az-Zariyah: 49)",
+  "breaking_news_img": "/sample_story.png",
+  "breaking_news_content": "<p>Karena kamu adalah orang penting yang mengisi hari-hari kami, kami ingin informasikan bahwa kami akan segera menikah! &lt;3</p><br/><p>Kami mengundang kamu untuk hadir di hari bahagia kami yang akan dilaksanakan di kediaman Keluarga Wahyu di Sidoarjo.</p><br/><p>Kalau bisa hadir, kami senang banget!<br/>Tapi kalau tidak bisa hadir karena jarak atau hal lain, tidak apa-apa kok, yang penting doa dan restunya tetap kami harapkan.</p><br/><p>Kami harapkan sebaik-baiknya doa untuk kelancaran pernikahan dan hari-hari bahagia setelahnya.</p><br/><p>Dengan penuh cinta,<br/>The bride and groom &lt;3</p>",
+  "love_story": [
+    {
+      "image": "/sample_story.png",
+      "title": "Episode 1: How We Met",
+      "duration": "10m 00s",
+      "description": "Describe how you two met for the first time. Shared interests, mutual friends, or a chance encounter."
+    },
+    {
+      "image": "/sample_story.png",
+      "title": "Episode 2: The First Date",
+      "duration": "12m 30s",
+      "description": "Tell the story of your first date. Where did you go? How did you feel?"
+    }
+  ],
+  "location": {
+    "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.123456789!2d112.6931!3d-7.362201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f22!3m3!1m2!1s0x0%3A0x0!2zN8KwMjEnNDMuOSJTIDExMsKwNDEnMzUuMiJF!5e0!3m2!1sid!2sid",
+    "place_name": "Wedding Venue Name",
+    "address": "City, Province",
+    "google_maps_url": "https://maps.google.com"
+  },
+  "show_menu": {
+    "breaking_news": true,
+    "bride_and_groom": true,
+    "love_story": true,
+    "gallery": false,
+    "wish": true
+  },
+  "footer": {
+    "message_line1": "Thank you for viewing our invitation!",
+    "message_line2": "Can't wait to see you! <3",
+    "link_url": ""
+  },
+  "default_guest_name": "Temanku <3",
+  "bank_accounts": [
+    {
+      "bank_name": "Bank Name",
+      "account_number": "1234567890",
+      "account_holder": "Full Name"
+    },
+    {
+      "bank_name": "Bank Name 2",
+      "account_number": "1234567890",
+      "account_holder": "Full Name"
+    }
+  ]
+}

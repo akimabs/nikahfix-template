@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-ico" href="/favicon.ico" sizes="48x48" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">NIKAHFIX</title>
+
+  <!-- =====================================================
+         META TAGS
+         Semua nilai di bawah ini diambil dari src/data/config.json
+         Script di bawah akan mengisi meta tag secara dinamis.
+         ===================================================== -->
+  <meta property="og:title" id="og-title" content="NIKAHFIX" />
+  <meta property="og:description" id="og-description" content="" />
+  <meta property="og:image" id="og-image" content="" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" id="og-url" content="" />
+
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="twitter-title" content="NIKAHFIX" />
+  <meta name="twitter:description" id="twitter-description" content="" />
+  <meta name="twitter:image" id="twitter-image" content="" />
+
+  <!-- Additional meta tags -->
+  <meta name="description" id="meta-description" content="" />
+  <meta name="keywords" id="meta-keywords" content="" />
+
+  <!-- =====================================================
+         PRELOAD CRITICAL IMAGES
+         Ganti URL-URL di bawah sesuai CDN yang kamu pakai.
+         Format: cdn_base_url + path dari config.json images.*
+         Hapus yang tidak dipakai, tambah yang perlu.
+         ===================================================== -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/NIKAHFIX.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/guest-icon.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/compsite-update.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/thumbnail.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/groom.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/bride.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/letter.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/story1.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/story2.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/story3.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/story4.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/face.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/4k-icon.webp" /> -->
+  <!-- <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/USERNAME/REPO@main/img/hd-icon.webp" /> -->
+</head>
+
+<body style="background-color: black">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- 
+      Umami Analytics (optional)
+      Daftar di https://umami.is, buat website baru, lalu isi data-website-id dengan ID yang diberikan.
+      Hapus script ini jika tidak menggunakan Umami.
+    -->
+  <!-- <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_UMAMI_WEBSITE_ID"></script> -->
+
+  <script type="module">
+    // Import config to populate meta tags dynamically
+    // Note: Meta tags for OG/Twitter need to be set as early as possible.
+    // For full SSR/SSG meta tag support, consider a server-side solution.
+    import config from '/src/data/config.json' assert { type: 'json' };
+
+    const cdnBase = config.cdn_base_url;
+    const meta = config.meta;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const kepada = urlParams.get('kepada');
+
+    const title = kepada
+      ? `${meta.site_name} - Undangan kepada ${kepada}`
+      : meta.title;
+
+    // Page title
+    document.title = title;
+
+    // OG tags
+    document.getElementById('og-title').setAttribute('content', title);
+    document.getElementById('og-description').setAttribute('content', meta.description);
+    document.getElementById('og-image').setAttribute('content', `${cdnBase}${meta.og_image_path}`);
+    document.getElementById('og-url').setAttribute('content', meta.og_url);
+
+    // Twitter tags
+    document.getElementById('twitter-title').setAttribute('content', title);
+    document.getElementById('twitter-description').setAttribute('content', meta.description);
+    document.getElementById('twitter-image').setAttribute('content', `${cdnBase}${meta.og_image_path}`);
+
+    // Standard tags
+    document.getElementById('meta-description').setAttribute('content', meta.description);
+    document.getElementById('meta-keywords').setAttribute('content', meta.keywords);
+  </script>
+</body>
+
+</html>
